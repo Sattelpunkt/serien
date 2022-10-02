@@ -2,11 +2,15 @@
 
 namespace App\Controllers;
 
-class HomeController {
+use Core\MainController;
+
+class HomeController extends MainController{
 
     public function index($params = []){
-        echo "Moin";
-        print_r($params);
+        //echo "Moin";
+        //print_r($params);
+        $this->model->getlib();
+
     }
 
 }
