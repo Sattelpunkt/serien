@@ -4,7 +4,6 @@ $this->printNavigation();
 ?>
 <div class="col d-flex flex-column h-sm-100">
     <div class="content">
-
         <div class="col-12 box">
             <div class="boxheader">Alle Netzwerke</div>
             <div class="boxbody">

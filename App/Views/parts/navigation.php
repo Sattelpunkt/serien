@@ -51,7 +51,11 @@
 
                     </div>
                 </li>
-            </ul>
+            </ul><br /><br /><br />
+            <div class="alert alert-danger" role="alert">
+                <center>Serie angelegt</center>
+
+            </div>
             <div class="sitebar-bottom"><ul class="nav nav-pills flex-column mb-auto navigation">
 
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;© <?= $this->output['year']?>&nbsp;&nbsp;<?= $this->output['Author']?></div>
