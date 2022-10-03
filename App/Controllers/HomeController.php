@@ -3,13 +3,13 @@
 namespace App\Controllers;
 
 use Core\MainController;
+use Core\MainView;
 
 class HomeController extends MainController{
 
     public function index($params = []){
-        //echo "Moin";
-        //print_r($params);
-        $this->model->getlib();
+        $this->view->setContentTemplate('index');
+        $this->view->render();
 
     }
 

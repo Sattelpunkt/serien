@@ -2,12 +2,16 @@
 
 namespace App\Controllers;
 
-class ErrorController
+use Core\MainController;
+
+class ErrorController extends MainController
 {
 
     public function notFound($params = [])
     {
-        echo "Error";
+        $this->view->setContentTemplate('error');
+        $this->view->setOutput(['errormsg' => "Die angeforderte Seite wurde nicht gefunden"]);
+        $this->view->render();
     }
 
 }

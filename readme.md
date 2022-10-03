@@ -32,9 +32,9 @@ Das Projekt soll eine Serien Datenbank sein, mit allen Serien, die ich bislang g
 ### Nächste Schritte: 
 
 - Basissystem
-  - View einfügen(Navigation, Content)
-  - Template einfügen sowie anpassen(Navigation, SessionMSG)
-  - Error Template einfügen(NotFound, ???)
+  - ~~View einfügen(Navigation, Content)~~
+  - ~~Template einfügen sowie anpassen(Navigation,~~ SessionMSG)
+  - ~~Error Template einfügen(NotFound, ???)~~
   - Session Message mit Aufruf von der MainModel
   - Datenbank mit Aufruf von der MainModel
 

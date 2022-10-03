@@ -1,7 +1,6 @@
 <?php
 
 spl_autoload_register(function ($className) {
-
     $parts = explode('\\', $className);
     $class = end($parts);
     array_pop($parts);
