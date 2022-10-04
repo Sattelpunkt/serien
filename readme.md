@@ -11,6 +11,7 @@ Das Projekt soll eine Serien Datenbank sein, mit allen Serien, die ich bislang g
 - Genres anlegen und danach sortieren
 - Aktuelle Serien nach Genres/Prio sortieren
 - Abgeschlossene Serien mit Bewertung(1-100)
+- unterbrochende Serie mit Begründung
   - Sortierung nach Bewertung
 - Zu jeder Serie soll es einen Freitext geben
 - uvm.
