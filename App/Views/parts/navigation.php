@@ -38,25 +38,37 @@
                     </a>
                 </li>
                 <li class="mb-1">
-                    <a href="#" class="nav-link text-white"data-bs-toggle="collapse" data-bs-target="#dashboard-collapse1" aria-expanded="false">
-                        <i class="fa fa-book" aria-hidden="true"></i>&nbsp; &nbsp;Genre&nbsp; &nbsp;<i class="fa fa-angle-down" aria-hidden="true" ></i>
+                    <a href="#" class="nav-link text-white" data-bs-toggle="collapse"
+                       data-bs-target="#dashboard-collapse1" aria-expanded="false">
+                        <i class="fa fa-book" aria-hidden="true"></i>&nbsp; &nbsp;Genre&nbsp; &nbsp;<i
+                                class="fa fa-angle-down" aria-hidden="true"></i>
                     </a>
                     <div class="collapse" id="dashboard-collapse1">
                         <ul class="nav nav-pills flex-column mb-auto navigation">
-                            <li><a href="#" class="nav-link text-white childlist"><i class="fa fa-book" aria-hidden="true"></i>&nbsp; &nbsp;Drama</a></li>
-                            <li><a href="#" class="nav-link text-white childlist"><i class="fa fa-book" aria-hidden="true"></i>&nbsp; &nbsp;Sitcom</a></li>
-                            <li><a href="#" class="nav-link text-white childlist"><i class="fa fa-book" aria-hidden="true"></i>&nbsp; &nbsp;Action</a></li>
-                            <li><a href="#" class="nav-link text-white childlist"><i class="fa fa-book" aria-hidden="true"></i>&nbsp; &nbsp;Comedy</a></li>
+                            <li><a href="#" class="nav-link text-white childlist"><i class="fa fa-book"
+                                                                                     aria-hidden="true"></i>&nbsp;
+                                    &nbsp;Drama</a></li>
+                            <li><a href="#" class="nav-link text-white childlist"><i class="fa fa-book"
+                                                                                     aria-hidden="true"></i>&nbsp;
+                                    &nbsp;Sitcom</a></li>
+                            <li><a href="#" class="nav-link text-white childlist"><i class="fa fa-book"
+                                                                                     aria-hidden="true"></i>&nbsp;
+                                    &nbsp;Action</a></li>
+                            <li><a href="#" class="nav-link text-white childlist"><i class="fa fa-book"
+                                                                                     aria-hidden="true"></i>&nbsp;
+                                    &nbsp;Comedy</a></li>
                         </ul>
 
                     </div>
                 </li>
-            </ul><br /><br /><br />
-            <div class="alert alert-danger" role="alert">
-                <center>Serie angelegt</center>
+            </ul>
+            <br/><br/><br/>
+            <?php
+            $this->displayMSG();
+            ?>
+            <div class="sitebar-bottom">
+                <ul class="nav nav-pills flex-column mb-auto navigation">
 
-            </div>
-            <div class="sitebar-bottom"><ul class="nav nav-pills flex-column mb-auto navigation">
-
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;© <?= $this->output['year']?>&nbsp;&nbsp;<?= $this->output['Author']?></div>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;© <?= $this->output['year'] ?>
+                    &nbsp;&nbsp;<?= $this->output['Author'] ?></div>
         </div>

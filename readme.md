@@ -41,3 +41,10 @@ Das Projekt soll eine Serien Datenbank sein, mit allen Serien, die ich bislang g
 
 - Projekt
   - Genres Anlegen, Bearbeiten, löschen
+
+### Mögliche Session Message Types
+
+- success
+- danger
+- warning
+- info

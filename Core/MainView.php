@@ -3,6 +3,7 @@
 namespace Core;
 
 use App\config;
+use Core\Session;
 
 class MainView
 {
@@ -68,6 +69,21 @@ class MainView
     public function setOutput($data)
     {
         $this->output = array_merge($this->output, $data);
+    }
+
+
+    public function displayMSG()
+    {
+        foreach (Session::getMSGs() as $key => $values) {
+            foreach ($values as $value) {
+                echo '
+                <div class="alert alert-' . $key . '" role="alert">
+                <center>' . $value . '</center>
+                </div>
+                ';
+            }
+        }
+        Session::deleteMSGs();
     }
 
 
