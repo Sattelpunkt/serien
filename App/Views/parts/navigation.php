@@ -29,14 +29,10 @@
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link text-white">
-                        <i class="fa fa-user" aria-hidden="true"></i>&nbsp; &nbsp;Unterbrochende Serien
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link text-white">
                         <i class="fa fa-user" aria-hidden="true"></i>&nbsp; &nbsp;Abgeschlossene Serien
                     </a>
                 </li>
+
                 <li class="mb-1">
                     <a href="#" class="nav-link text-white" data-bs-toggle="collapse"
                        data-bs-target="#dashboard-collapse1" aria-expanded="false">
@@ -57,9 +53,16 @@
                             <li><a href="#" class="nav-link text-white childlist"><i class="fa fa-book"
                                                                                      aria-hidden="true"></i>&nbsp;
                                     &nbsp;Comedy</a></li>
+
                         </ul>
 
+
                     </div>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-white">
+                        <i class="fa fa-cog" aria-hidden="true"></i>&nbsp; &nbsp;Einstellungen
+                    </a>
+                </li>
                 </li>
             </ul>
             <br/><br/><br/>

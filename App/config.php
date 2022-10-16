@@ -15,9 +15,9 @@ class config
         'default_site_header' => 'header',
         'default_site_navigation' => 'navigation',
         'default_site_message' => 'message',
-        'Database_Host' => '',
-        'Database_User' => '',
-        'Database_Password' => '',
-        'Database_Name' => ''
+        'Database_Host' => 'ddev-serien-db:3306',
+        'Database_User' => 'root',
+        'Database_Password' => 'root',
+        'Database_Name' => 'serien'
     ];
 }

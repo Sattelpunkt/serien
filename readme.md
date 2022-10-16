@@ -6,6 +6,10 @@ Dadurch, dass ich große Lücken im Lebenslauf habe, werde mich mit einem PHP Pr
 
 Das Projekt soll eine Serien Datenbank sein, mit allen Serien, die ich bislang geschaut habe sowie eine ToDo.
 
+## Update
+
+Es gibt überlegungen, es auch für Filme und Bücher(Hörbücher) zu erweitern
+
 ### Folgende Features soll das Projekt erfüllen
 - Wunschliste mit Prio
 - Genres anlegen und danach sortieren
@@ -30,14 +34,15 @@ Das Projekt soll eine Serien Datenbank sein, mit allen Serien, die ich bislang g
 
 
 
+
 ### Nächste Schritte: 
 
 - Basissystem
   - ~~View einfügen(Navigation, Content)~~
   - ~~Template einfügen sowie anpassen(Navigation,~~ SessionMSG)
   - ~~Error Template einfügen(NotFound, ???)~~
-  - Session Message mit Aufruf von der MainModel
-  - Datenbank mit Aufruf von der MainModel
+  - ~~Session Message mit Aufruf von der MainView~~
+  - Datenbank mit Aufruf- Erbbar von allen Klassen
 
 - Projekt
   - Genres Anlegen, Bearbeiten, löschen
