@@ -22,14 +22,17 @@ main {
     overflow-x: auto;
     overflow-y: hidden;
 }
+
 .sidebar-header {
     text-align: center;
     color: white;
 
 }
+
 .nav-link.active {
     background-color: #606060 !important;
 }
+
 .sidebar {
     background-color: #343A40;
     border-right: 1px solid #606060;
@@ -37,6 +40,7 @@ main {
     position: relative;
 
 }
+
 .navigation a:hover {
     background-color: #606060;
 }
@@ -55,11 +59,10 @@ main {
     width: 90%;
     border-top: 1px solid #606060;
     color: gray;
-    font-size:smaller;
-    position : absolute;
-    bottom   : 0px;
+    font-size: smaller;
+    position: absolute;
+    bottom: 0px;
 }
-
 
 
 .content {
@@ -79,6 +82,7 @@ main {
     position: fixed;
     bottom: 10px;
 }
+
 .box {
     background-color: #343A40;
     min-height: 20vh;
@@ -86,6 +90,7 @@ main {
     border: 2px solid #606060;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     position: relative;
+
 }
 
 .boxheader {
@@ -94,7 +99,7 @@ main {
     border-bottom: 1px solid #606060;
     text-align: center;
     color: white;
-    font-size:larger;
+    font-size: larger;
     font-weight: bold;
 }
 
@@ -105,10 +110,11 @@ main {
     border-top: 1px solid #606060;
     text-align: right;
     color: gray;
-    font-size:smaller;
-    position : absolute;
-    bottom   : 0;
+    font-size: smaller;
+    position: absolute;
+    bottom: 0;
 }
+
 .boxbody {
     background-color: #343A40;
     min-height: 30px;
@@ -117,9 +123,20 @@ main {
     padding: 30px;
 }
 
+.boxklein {
+    background-color: #343A40;
+    min-height: 20vh;
+    margin-bottom: 30px;
+    border: 2px solid #606060;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    position: relative;
+    width: 50%;
+    left: 25%;
+}
+
 .table_main {
     border: none;
-    border-collapse:separate;
+    border-collapse: separate;
     border-spacing: 0px 5px;
     font-size: 14px;
     color: white;

@@ -28,7 +28,6 @@ class Router
         }
 
         preg_match_all('/([0-9]+)/', $_SERVER['REQUEST_URI'], $params);
-
         #Route suchen
         foreach (self::$routes as $route) {
             if ($route['path'] == $urlPath) {
@@ -48,7 +47,7 @@ class Router
 
     public static function redirect($location)
     {
-        header('Location: ' . ROOT . $location);
+        header('Location: https://' . URL . $location);
         exit();
     }
 }

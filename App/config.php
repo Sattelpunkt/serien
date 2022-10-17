@@ -18,6 +18,6 @@ class config
         'Database_Host' => 'ddev-serien-db:3306',
         'Database_User' => 'root',
         'Database_Password' => 'root',
-        'Database_Name' => 'serien'
+        'Database_Name' => 'medien'
     ];
 }

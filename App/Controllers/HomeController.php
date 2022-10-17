@@ -15,8 +15,8 @@ class HomeController extends MainController
         $this->model->getDB();
         $this->view->setContentTemplate('index');
 
-        # Session::addMSG('danger', 'Penis');
-        # Session::addMSG('info', 'Penis');
+        # Session::addMSG('danger', 'Test');
+        # Session::addMSG('info', 'Test');
        $this->view->render();
     }
 
