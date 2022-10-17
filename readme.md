@@ -1,24 +1,27 @@
 ## Herzlich Willkommen bei dem Projekt "Serien Datenbank"
 
 Im Frühjahr geht meine Bewerbungsphase für meine "Fachpraktische Ausbildung" los.
-Dadurch, dass ich große Lücken im Lebenslauf habe, werde mich mit einem PHP Projekt vorstellen
+Dadurch, dass ich große Lücken im Lebenslauf habe, werde mich mit einem PHP Projekt vorstellen.
+
+Das Projekt soll eine Datenbank für alle Leute sein, die Ihren Überblick über
+- Filme (0)
+- Serien (1)
+- Bücher (2)
+- Hörbücher (3)
+
+verloren haben und diese kategorisieren wollen.
 
 
-Das Projekt soll eine Serien Datenbank sein, mit allen Serien, die ich bislang geschaut habe sowie eine ToDo.
-
-## Update
-
-Es gibt überlegungen, es auch für Filme und Bücher(Hörbücher) zu erweitern
 
 ### Folgende Features soll das Projekt erfüllen
-- Wunschliste mit Prio
-- Genres anlegen und danach sortieren
-- Aktuelle Serien nach Genres/Prio sortieren
-- Abgeschlossene Serien mit Bewertung(1-100)
-- unterbrochende Serie mit Begründung
-  - Sortierung nach Bewertung
-- Zu jeder Serie soll es einen Freitext geben
-- uvm.
+- Für jedes Thema soll es folgende Möglichkeiten geben
+  - Aktuelle 
+  - Wunschliste
+  - Abgeschlossen
+  - Abgebrochen
+  - Jedes Medium soll in frei wählbaren Genres kategorisierbar sein
+  - Bewertung sollen möglich sein
+  - Freitext für Gedanken/Meinungen zur Serie
 
 
 ### PHP Anforderungen
@@ -26,14 +29,7 @@ Es gibt überlegungen, es auch für Filme und Bücher(Hörbücher) zu erweitern
 - MVC
 - Autoload
 - Datenbanklasse PDO
-- Sortierungsspeicherung via Session
 - Session MSG
-- Es wird auf folgende Punkte verzichtet
-  - Sicherheit
-  - Login
-
-
-
 
 ### Nächste Schritte: 
 
@@ -42,10 +38,14 @@ Es gibt überlegungen, es auch für Filme und Bücher(Hörbücher) zu erweitern
   - ~~Template einfügen sowie anpassen(Navigation,~~ SessionMSG)
   - ~~Error Template einfügen(NotFound, ???)~~
   - ~~Session Message mit Aufruf von der MainView~~
-  - Datenbank mit Aufruf- Erbbar von allen Klassen
+  - ~~Datenbank mit Aufruf- Erbbar von allen Klassen~~
+  
 
-- Projekt
-  - Genres Anlegen, Bearbeiten, löschen
+- UserManagement
+  - Registieren(ohne Email versand vorerst)
+  - Login
+  - Password Ändern
+  - Email Ändern
 
 ### Mögliche Session Message Types
 
@@ -53,3 +53,11 @@ Es gibt überlegungen, es auch für Filme und Bücher(Hörbücher) zu erweitern
 - danger
 - warning
 - info
+
+### Folgende Elemente aus dem Core sind fertig:
+- Router (MVC)
+- Main (View, Controller, Main)
+- Session (inklusive Session MSG)
+- Helpers
+- Database
+- Security

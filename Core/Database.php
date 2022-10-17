@@ -40,9 +40,34 @@ class Database
         return self::$db;
     }
 
-    public function __destruct() {
+    public function __destruct()
+    {
         $db = null;
         $dbh = null;
     }
 
+    public function run($sql, $args = null)
+    {
+        if (!$args) {
+            return $this->dbh->query($sql);
+        }
+        $stmt = $this->dbh->prepare($sql);
+        $stmt->execute($args);
+        return $stmt;
+    }
+
+    public function row($stmt)
+    {
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function column($stmt)
+    {
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
+    public function getLastInsertID()
+    {
+        return $this->dbh->lastInsertId();
+    }
 }
