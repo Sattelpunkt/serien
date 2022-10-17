@@ -10,6 +10,7 @@ Das Projekt soll eine Datenbank für alle Leute sein, die Ihren Überblick über
 - Hörbücher (3)
 
 verloren haben und diese kategorisieren wollen.
+Jeder User soll frei entscheiden, welche, der oben genannten Medien, er nutzen möchte
 
 
 
@@ -21,7 +22,7 @@ verloren haben und diese kategorisieren wollen.
   - Abgebrochen
   - Jedes Medium soll in frei wählbaren Genres kategorisierbar sein
   - Bewertung sollen möglich sein
-  - Freitext für Gedanken/Meinungen zur Serie
+  - Freitext für Gedanken/Meinungen zum Medium
 
 
 ### PHP Anforderungen
