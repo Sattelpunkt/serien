@@ -1,4 +1,4 @@
-## Herzlich Willkommen bei dem Projekt "Serien Datenbank"
+## Herzlich Willkommen bei dem Projekt "Medien Datenbank"
 
 Im Frühjahr geht meine Bewerbungsphase für meine "Fachpraktische Ausbildung" los.
 Dadurch, dass ich große Lücken im Lebenslauf habe, werde mich mit einem PHP Projekt vorstellen.
