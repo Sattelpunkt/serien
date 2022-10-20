@@ -13,11 +13,6 @@ class Users
 
         $error = false;
 
-        if ($registerData['filme'] == 0 and $registerData['serien'] == 0 and $registerData['buecher'] == 0 and $registerData['hoerbucher'] == 0) {
-            $error = true;
-            Session::addMSG('danger', "Mindestens ein Modul muss aktiv sein");
-        }
-
         if ($registerData['password1'] != $registerData['password2']) {
             $error = true;
             Session::addMSG('danger', "Die Passwörter sind nicht identisch");
@@ -38,15 +33,11 @@ class Users
     public function doRegister($registerData)
     {
         $db = Database::getInstance();
-        $sql = "INSERT INTO `accounts`(username, password, email, filme, serien, buecher, hoerbuecher) VALUES (:username, :password, :email, :filme, :serien, :buecher, :hoerbuecher)";
+        $sql = "INSERT INTO `accounts`(username, password, email) VALUES (:username, :password, :email)";
         $args = [
             ':username' => $registerData['username'],
             ':password' => password_hash($registerData['password1'], PASSWORD_DEFAULT),
-            ':email' => $registerData['email'],
-            ':filme' => $registerData['filme'],
-            ':serien' => $registerData['serien'],
-            ':buecher' => $registerData['buecher'],
-            ':hoerbuecher' => $registerData['hoerbuecher'],
+            ':email' => $registerData['email']
         ];
         return $db->run($sql, $args);
 

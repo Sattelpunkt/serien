@@ -50,18 +50,18 @@ main {
     padding-top: 10px;
     padding-bottom: 10px;
     border-bottom: 1px solid gray;
+    font-size: 13px;
 
 }
 
 .sitebar-bottom {
     background-color: #343A40;
-    height: 30px;
-    width: 90%;
     border-top: 1px solid #606060;
     color: gray;
     font-size: smaller;
-    position: absolute;
-    bottom: 0px;
+    position: relative;
+    width: 90%;
+
 }
 
 
@@ -156,4 +156,8 @@ tr {
 .graybutton {
     background-color: #606060;
     border: none;
+}
+
+.alert {
+    font-size: 12px;
 }

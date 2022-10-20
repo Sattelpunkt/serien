@@ -16,12 +16,14 @@ $this->printHeader();
                         <div class="form-group col-md-6">
                             <div class="mb-3">
                                 <label for="username" class="form-label">Username</label>
-                                <input type="text" class="form-control" id="username" name="username" aria-describedby="usernamelHelp" autocomplete="false" required>
+                                <input type="text" class="form-control" id="username" name="username"
+                                       aria-describedby="usernamelHelp" autocomplete="false" required>
                                 <div id="emailHelp" class="form-text">Der Username ist nicht änderbar</div>
                             </div>
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" autocomplete="false" required>
+                                <input type="email" class="form-control" id="email" name="email"
+                                       aria-describedby="emailHelp" autocomplete="false" required>
                                 <div id="emailHelp" class="form-text">Die Email ist änderbar</div>
                             </div>
                             <div class="mb-3">
@@ -39,49 +41,17 @@ $this->printHeader();
 
                             </div>
 
-                            <hr/>
 
-                            <label for="checkbox" class="form-label">Welches Modul möchtest du verwenden? <br />Mindestens eins muss aktiv sein</label>
-
-                            <div class="form-check">
-                                <input type="hidden" value="0" name="filme">
-                                <input class="form-check-input" type="checkbox" name="filme" value="1" id="flexCheckDefault" checked>
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    Filme
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input type="hidden" value="0" name="serien">
-                                <input class="form-check-input" type="checkbox" name="serien" value="1" id="flexCheckChecked">
-                                <label class="form-check-label" for="flexCheckChecked">
-                                    Serien
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input type="hidden" value="0" name="buecher">
-                                <input class="form-check-input" type="checkbox" name="buecher" value="1" id="flexCheckChecked">
-                                <label class="form-check-label" for="flexCheckChecked">
-                                    Bücher
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input type="hidden" value="0" name="hoerbuecher">
-                                <input class="form-check-input" type="checkbox" name="hoerbuecher" value="1" id="flexCheckChecked"
-                                       aria-describedby="checkboxHelp">
-                                <label class="form-check-label" for="flexCheckChecked">
-                                    Hörbücher
-                                </label>
-                            </div>
-                            <div id="checkboxHelp" class="form-text">Die Module sind später anpassbar</div>
-                            <br />
+                            <br/>
                             <div class="col-12">
                                 <button type="submit" class="btn btn-primary graybutton">Registrieren</button>
-                            </div><br />
+                            </div>
+                            <br/>
 
                 </center>
                 </form>
             </div>
-            <div class="boxfooter">Zurück zum <a href="https://<?= URL ?>login">Login</a>&nbsp; &nbsp; &nbsp; </div>
+            <div class="boxfooter">Zurück zum <a href="https://<?= URL ?>login">Login</a>&nbsp; &nbsp; &nbsp;</div>
         </div>
 
 

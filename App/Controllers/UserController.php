@@ -53,7 +53,7 @@ class UserController extends MainController
     public function logout($params = [])
     {
         $this->model->Logout();
-        Session::addMSG('info', 'Du hast dich ausgeloggt');
+        Session::addMSG('success', 'Du hast dich ausgeloggt');
         Router::redirect('login');
 
     }

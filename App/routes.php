@@ -56,3 +56,11 @@ Router::setRoute([
         'action' => 'home'
     ]
 ]);
+
+Router::setRoute([
+    'settings' => [
+        'path' => '/settings/',
+        'controller' => \App\Controllers\SettingsController::class,
+        'action' => 'index'
+    ]
+]);
