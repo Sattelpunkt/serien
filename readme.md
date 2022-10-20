@@ -10,7 +10,7 @@ Das Projekt soll eine Datenbank für alle Leute sein, die Ihren Überblick über
 - Hörbücher (3)
 
 verloren haben und diese kategorisieren wollen.
-Jeder User soll frei entscheiden, welche, der oben genannten Medien, er nutzen möchte
+
 
 
 
@@ -39,7 +39,7 @@ Jeder User soll frei entscheiden, welche, der oben genannten Medien, er nutzen m
   - ~~Login~~
   - Password Ändern
   - Email Ändern
- - Genre
+- Genre
   - Genre anlegen/bearbeiten/löschen
 
 ### Mögliche Session Message Types
