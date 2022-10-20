@@ -40,7 +40,7 @@ verloren haben und diese kategorisieren wollen.
   - ~~Password Ändern~~
   - ~~Email Ändern~~
 - Genre
-  - Genre anlegen/bearbeiten/löschen
+  - ~~Genre anlegen~~/bearbeiten/löschen
 
 ### Mögliche Session Message Types
 
