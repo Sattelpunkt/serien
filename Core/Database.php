@@ -71,4 +71,9 @@ class Database
         return $this->dbh->lastInsertId();
     }
 
+    public function findByID($table, $id)
+    {
+        return $this->column($this->run("SELECT * FROM `" . $table . "` WHERE `id`= :id", [":id" => $id]));
+    }
+
 }

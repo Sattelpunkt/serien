@@ -7,7 +7,7 @@ $this->printNavigation();
         <div class="col-12 box">
             <div class="boxheader">Passwort ändern</div>
             <div class="boxbody">
-                <form class="row g-3">
+                <form class="row g-3" action="https://<?= URL ?>changePassword/" method="post">
 
                     <div class="col-md-4">
                         <label for="inputCity" class="form-label">aktuelles Passwort</label>
@@ -34,7 +34,7 @@ $this->printNavigation();
         <div class="col-12 box">
             <div class="boxheader">Email ändern</div>
             <div class="boxbody">
-                <form class="row g-3">
+                <form class="row g-3" action="https://<?= URL ?>changeEmail/" method="post">
 
                     <div class="col-md-4">
                         <label for="inputCity" class="form-label">Neue Email</label>

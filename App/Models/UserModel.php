@@ -37,4 +37,16 @@ class UserModel extends MainModel
         $users = new Users();
         return $users->doLogout();
     }
+
+    public function changePassword($changeData)
+    {
+        $users = new Users();
+        return $users->changePassword($changeData);
+    }
+
+    public function changeEmail($changeData)
+    {
+        $users = new Users();
+        return $users->changeEmail($changeData);
+    }
 }

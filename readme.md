@@ -37,8 +37,8 @@ verloren haben und diese kategorisieren wollen.
 - UserManagement
   - ~~Registieren(ohne Email versand vorerst)~~
   - ~~Login~~
-  - Password Ändern
-  - Email Ändern
+  - ~~Password Ändern~~
+  - ~~Email Ändern~~
 - Genre
   - Genre anlegen/bearbeiten/löschen
 

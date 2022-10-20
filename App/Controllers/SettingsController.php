@@ -22,4 +22,5 @@ class SettingsController extends MainController
         $this->view->render();
     }
 
+
 }

@@ -58,5 +58,24 @@ class UserController extends MainController
 
     }
 
+    public function changePassword($params = []) {
+        if($this->model->changePassword(Security::clean($_POST))) {
+            Session::addMSG('success', 'Passwort erfolgreich geändert');
+        } else {
+            Session::addMSG('info', 'Passwort wurde nicht geändert');
+        }
+        Router::redirect('settings');
+    }
+
+    public function changeEmail($params = []) {
+        if($this->model->changeEmail(Security::clean($_POST))) {
+            Session::addMSG('success', 'Email erfolgreich geändert');
+        } else {
+            Session::addMSG('info', 'Email wurde nicht geändert');
+        }
+        Router::redirect('settings');
+    }
+
+
 }
 

@@ -64,3 +64,19 @@ Router::setRoute([
         'action' => 'index'
     ]
 ]);
+
+Router::setRoute([
+    'changePassword' => [
+        'path' => '/changePassword/',
+        'controller' => \App\Controllers\UserController::class,
+        'action' => 'changePassword'
+    ]
+]);
+
+Router::setRoute([
+    'changeEmail' => [
+        'path' => '/changeEmail/',
+        'controller' => \App\Controllers\UserController::class,
+        'action' => 'changeEmail'
+    ]
+]);

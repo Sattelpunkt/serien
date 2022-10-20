@@ -5,6 +5,7 @@ namespace App\Library;
 use Core\Database;
 use Core\Session;
 use Core\Helpers;
+use Core\Security;
 
 class Users
 {
@@ -78,7 +79,7 @@ class Users
 
     public function isLogin()
     {
-       return Session::exists('loggedIn');
+        return Session::exists('loggedIn');
 
     }
 
@@ -86,6 +87,37 @@ class Users
     {
         Session::delete('loggedIn');
         Session::delete('userID');
+    }
+
+    public function changePassword($changeData)
+    {
+        $db = Database::getInstance();
+        $userdata = $db->findByID('accounts', Security::clean(Session::get('userID')));
+
+        $error = FALSE;
+
+        if (!password_verify($changeData['oldPassword'], $userdata['password'])) {
+            $error = TRUE;
+            Session::addMSG('danger', 'das alte Passwort ist nicht richtig');
+        }
+        if ($changeData['newPassword1'] != $changeData['newPassword2']) {
+            $error = TRUE;
+            Session::addMSG('danger', 'die neuen Passwörter sind nicht identisch');
+        }
+        if ($error === TRUE) {
+            return $error;
+        }
+        $sql = "UPDATE `accounts` set `password` =:password WHERE id =:id";
+        $arg = [":password" => password_hash($changeData['newPassword1'], PASSWORD_DEFAULT), ":id" => Security::clean(Session::get('userID'))];
+        return $db->run($sql, $arg);
+    }
+
+    public function changeEMail($changeData)
+    {
+        $db = Database::getInstance();
+        $sql = "UPDATE `accounts` set `email` =:email WHERE id =:id";
+        $arg = [":email" => $changeData['email'], ":id" => Session::get('userID')];
+        return $db->run($sql, $arg);
     }
 
 
