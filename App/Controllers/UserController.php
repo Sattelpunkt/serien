@@ -22,10 +22,10 @@ class UserController extends MainController
     public function doRegister($params = [])
     {
         if ($this->model->Register(Security::clean($_POST))) {
-            Session::addMSG('info', 'Alle eingaben haben geklappt');
-
+            Session::addMSG('success', 'Account wurde erfolgreich angelegt!');
             Router::redirect('register');
         } else {
+            Session::addMSG('danger', 'Die Registrierung ist fehlgeschlagen!');
             Router::redirect('register');
 
         }

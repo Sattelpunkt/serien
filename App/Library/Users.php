@@ -13,9 +13,7 @@ class Users
 
         $error = false;
 
-        # mindestens eine Checkbox aktiv?
-        # ToDo Hat noch fehler, später gegenprüfen
-        if ($registerData['filme'] == 0 AND $registerData['serien'] == 0 AND $registerData['buecher'] == 0 AND $registerData['hoerbucher']) {
+        if ($registerData['filme'] == 0 and $registerData['serien'] == 0 and $registerData['buecher'] == 0 and $registerData['hoerbucher'] == 0) {
             $error = true;
             Session::addMSG('danger', "Mindestens ein Modul muss aktiv sein");
         }
@@ -25,7 +23,6 @@ class Users
             Session::addMSG('danger', "Die Passwörter sind nicht identisch");
         }
 
-        # Gibt es den User schon?
         $db = Database::getInstance();
         $result = $db->column($db->run('Select `username` FROM `accounts` WHERE `username` = :username', [':username' => $registerData['username']]));
 
@@ -35,6 +32,25 @@ class Users
         }
 
         return $error;
+
+    }
+
+    public function doRegister($registerData)
+    {
+
+        Helpers::dnd($registerData);
+        $db = Database::getInstance();
+        $sql = "INSERT INTO `accounts`(username, password, email, filme, serien, buecher, hoerbuecher) VALUES (:username, :password, :email, :filme, :serien, :buecher, :hoerbuecher)";
+        $args = [
+            ':username' => $registerData['username'],
+            ':password' => password_hash($registerData['password1'], PASSWORD_DEFAULT),
+            ':email' => $registerData['email'],
+            ':filme' => $registerData['filme'],
+            ':serien' => $registerData['serien'],
+            ':buecher' => $registerData['buecher'],
+            ':hoerbuecher' => $registerData['hoerbuecher'],
+        ];
+        return $db->run($sql, $args);
 
     }
 }

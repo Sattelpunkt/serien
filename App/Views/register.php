@@ -51,8 +51,8 @@ $this->printHeader();
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input type="hidden" value="0" name="serie">
-                                <input class="form-check-input" type="checkbox" name="serie" value="1" id="flexCheckChecked">
+                                <input type="hidden" value="0" name="serien">
+                                <input class="form-check-input" type="checkbox" name="serien" value="1" id="flexCheckChecked">
                                 <label class="form-check-label" for="flexCheckChecked">
                                     Serien
                                 </label>
