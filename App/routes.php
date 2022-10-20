@@ -3,7 +3,7 @@
 use Core\Router;
 
 Router::setRoute([
-    'home' => [
+    'index' => [
         'path' => '/',
         'controller' => \App\Controllers\HomeController::class,
         'action' => 'index'
@@ -34,9 +34,25 @@ Router::setRoute([
 ]);
 
 Router::setRoute([
+    'logout' => [
+        'path' => '/logout/',
+        'controller' => \App\Controllers\UserController::class,
+        'action' => 'logout'
+    ]
+]);
+
+Router::setRoute([
     'doLogin' => [
         'path' => '/doLogin/',
         'controller' => \App\Controllers\UserController::class,
         'action' => 'doLogin'
+    ]
+]);
+
+Router::setRoute([
+    'home' => [
+        'path' => '/home/',
+        'controller' => \App\Controllers\HomeController::class,
+        'action' => 'home'
     ]
 ]);

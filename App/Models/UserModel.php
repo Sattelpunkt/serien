@@ -31,4 +31,10 @@ class UserModel extends MainModel
             return FALSE;
         }
     }
+
+    public function Logout()
+    {
+        $users = new Users();
+        return $users->doLogout();
+    }
 }

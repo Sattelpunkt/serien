@@ -63,6 +63,11 @@
                         <i class="fa fa-cog" aria-hidden="true"></i>&nbsp; &nbsp;Einstellungen
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="https://<?= URL ?>logout" class="nav-link text-white">
+                        <i class="fa fa-cog" aria-hidden="true"></i>&nbsp; &nbsp;Ausloggen
+                    </a>
+                </li>
                 </li>
             </ul>
             <br/><br/><br/>

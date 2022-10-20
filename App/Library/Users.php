@@ -71,11 +71,12 @@ class Users
         return $error;
     }
 
-    public function doLogin($registerData)
+    public function doLogin($loginData)
     {
         $db = Database::getInstance();
+        $result = $db->column($db->run('SELECT `id` FROM `accounts` WHERE `username` = :username', [':username' => $loginData['username']]));
         Session::set('loggedIn', TRUE);
-        Session::set('userID', $db->getLastInsertID());
+        Session::set('userID', $result['id']);
         return TRUE;
     }
 
@@ -86,7 +87,8 @@ class Users
 
     public function isLogin()
     {
-        return Session::exists('loggedIn') AND Session::get('loggedIn') == TRUE;
+       return Session::exists('loggedIn');
+
     }
 
     public function doLogout()

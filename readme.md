@@ -34,19 +34,12 @@ Jeder User soll frei entscheiden, welche, der oben genannten Medien, er nutzen m
 
 ### Nächste Schritte: 
 
-- Basissystem
-  - ~~View einfügen(Navigation, Content)~~
-  - ~~Template einfügen sowie anpassen(Navigation,~~ SessionMSG)
-  - ~~Error Template einfügen(NotFound, ???)~~
-  - ~~Session Message mit Aufruf von der MainView~~
-  - ~~Datenbank mit Aufruf- Erbbar von allen Klassen~~
-  
-
 - UserManagement
-  - Registieren(ohne Email versand vorerst)
-  - Login
+  - ~~Registieren(ohne Email versand vorerst)~~
+  - ~~Login~~
   - Password Ändern
   - Email Ändern
+  - Genre anlegen/bearbeiten/löschen
 
 ### Mögliche Session Message Types
 
@@ -55,10 +48,3 @@ Jeder User soll frei entscheiden, welche, der oben genannten Medien, er nutzen m
 - warning
 - info
 
-### Folgende Elemente aus dem Core sind fertig:
-- Router (MVC)
-- Main (View, Controller, Main)
-- Session (inklusive Session MSG)
-- Helpers
-- Database
-- Security
