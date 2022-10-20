@@ -7,6 +7,7 @@ use Core\Helpers;
 use Core\Security;
 use Core\Router;
 use Core\Session;
+use App\Library\Users;
 
 
 class UserController extends MainController
@@ -74,6 +75,17 @@ class UserController extends MainController
             Session::addMSG('info', 'Email wurde nicht geändert');
         }
         Router::redirect('settings');
+    }
+
+    public function index($params = [])
+    {
+        $user = new Users();
+        if ($user->isLogin() == FALSE) {
+            Session::addMSG('danger', 'Du bist nicht eingeloggt');
+            Router::redirect('login');
+        }
+        $this->view->setContentTemplate('settings');
+        $this->view->render();
     }
 
 

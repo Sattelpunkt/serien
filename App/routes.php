@@ -60,7 +60,7 @@ Router::setRoute([
 Router::setRoute([
     'settings' => [
         'path' => '/settings/',
-        'controller' => \App\Controllers\SettingsController::class,
+        'controller' => \App\Controllers\UserController::class,
         'action' => 'index'
     ]
 ]);
@@ -78,5 +78,28 @@ Router::setRoute([
         'path' => '/changeEmail/',
         'controller' => \App\Controllers\UserController::class,
         'action' => 'changeEmail'
+    ]
+]);
+
+Router::setRoute([
+    'genreSettings' => [
+        'path' => '/genre/settings/',
+        'controller' => \App\Controllers\GenreController::class,
+        'action' => 'settings'
+    ]
+]);
+Router::setRoute([
+    'newGenre' => [
+        'path' => '/genre/new/',
+        'controller' => \App\Controllers\GenreController::class,
+        'action' => 'newGenre'
+    ]
+]);
+
+Router::setRoute([
+    'insertGenre' => [
+        'path' => '/genre/insert/',
+        'controller' => \App\Controllers\GenreController::class,
+        'action' => 'insertGenre'
     ]
 ]);

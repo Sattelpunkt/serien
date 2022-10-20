@@ -53,6 +53,9 @@
                             <li><a href="#" class="nav-link text-white childlist"><i class="fa fa-book"
                                                                                      aria-hidden="true"></i>&nbsp;
                                     &nbsp;Comedy</a></li>
+                            <li><a href="https://<?= URL ?>genre/settings" class="nav-link text-white childlist"><i class="fa fa-cog"
+                                                                                     aria-hidden="true"></i>&nbsp;
+                                    &nbsp;Einstellungen</a></li>
 
                         </ul>
 
