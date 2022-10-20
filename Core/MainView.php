@@ -3,7 +3,10 @@
 namespace Core;
 
 use App\config;
+use Core\Security;
 use Core\Session;
+use App\Library\Genres;
+
 
 class MainView
 {
@@ -84,6 +87,12 @@ class MainView
             }
         }
         Session::deleteMSGs();
+    }
+
+    public function getGenre() {
+        $genres = new Genres();
+        $data['genres'] = $genres->getGenreByUserID(Security::clean(Session::get('userID')));
+        $this->setOutput($data);
     }
 
 

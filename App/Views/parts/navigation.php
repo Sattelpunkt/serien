@@ -1,3 +1,6 @@
+<?php
+$this->getGenre();
+?>
 <div class="container-fluid overflow-hidden">
     <div class="row vh-100 overflow-auto">
         <div class="sidebar p-2" style="width: 240px;">
@@ -41,18 +44,11 @@
                     </a>
                     <div class="collapse" id="dashboard-collapse1">
                         <ul class="nav nav-pills flex-column mb-auto navigation">
-                            <li><a href="#" class="nav-link text-white childlist"><i class="fa fa-book"
+                            <?php foreach ($this->output['genres'] AS $value) { ?>
+                            <li><a href="https://<?= URL ?>genre/show/<?=  $value['id']  ?>" class="nav-link text-white childlist"><i class="fa fa-book"
                                                                                      aria-hidden="true"></i>&nbsp;
-                                    &nbsp;Drama</a></li>
-                            <li><a href="#" class="nav-link text-white childlist"><i class="fa fa-book"
-                                                                                     aria-hidden="true"></i>&nbsp;
-                                    &nbsp;Sitcom</a></li>
-                            <li><a href="#" class="nav-link text-white childlist"><i class="fa fa-book"
-                                                                                     aria-hidden="true"></i>&nbsp;
-                                    &nbsp;Action</a></li>
-                            <li><a href="#" class="nav-link text-white childlist"><i class="fa fa-book"
-                                                                                     aria-hidden="true"></i>&nbsp;
-                                    &nbsp;Comedy</a></li>
+                                    &nbsp;<?= $value['name'] ?></a></li>
+                           <?php } ?>
                             <li><a href="https://<?= URL ?>genre/settings" class="nav-link text-white childlist"><i class="fa fa-cog"
                                                                                      aria-hidden="true"></i>&nbsp;
                                     &nbsp;Einstellungen</a></li>
