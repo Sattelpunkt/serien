@@ -24,3 +24,19 @@ Router::setRoute([
         'action' => 'doRegister'
     ]
 ]);
+
+Router::setRoute([
+    'login' => [
+        'path' => '/login/',
+        'controller' => \App\Controllers\UserController::class,
+        'action' => 'login'
+    ]
+]);
+
+Router::setRoute([
+    'doLogin' => [
+        'path' => '/doLogin/',
+        'controller' => \App\Controllers\UserController::class,
+        'action' => 'doLogin'
+    ]
+]);

@@ -77,10 +77,11 @@ $this->printHeader();
                             <div class="col-12">
                                 <button type="submit" class="btn btn-primary graybutton">Registrieren</button>
                             </div><br />
+
                 </center>
                 </form>
             </div>
-            <div class="boxfooter"></div>
+            <div class="boxfooter">Zurück zum <a href="https://<?= URL ?>login">Login</a>&nbsp; &nbsp; &nbsp; </div>
         </div>
 
 

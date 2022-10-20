@@ -23,12 +23,19 @@ class UserController extends MainController
     {
         if ($this->model->Register(Security::clean($_POST))) {
             Session::addMSG('success', 'Account wurde erfolgreich angelegt!');
-            Router::redirect('register');
+            Router::redirect('login');
         } else {
             Session::addMSG('danger', 'Die Registrierung ist fehlgeschlagen!');
             Router::redirect('register');
 
         }
     }
+    public function login($params = [])
+    {
+        $this->view->setContentTemplate('login');
+
+        $this->view->render();
+    }
+
 }
 
