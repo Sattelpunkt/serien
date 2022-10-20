@@ -14,11 +14,21 @@ class UserModel extends MainModel
     {
 
         $users = new Users();
-        if ($users->checkRegister($registerData) == false) {
+        if ($users->checkRegister($registerData) === FALSE) {
             return $users->doRegister($registerData);
         } else {
-            return false;
+            return FALSE;
         }
 
+    }
+
+    public function Login($loginData)
+    {
+        $users = new Users();
+        if ($users->checkLogin($loginData) == 0) {
+            return $users->doLogin($loginData);
+        } else {
+            return FALSE;
+        }
     }
 }

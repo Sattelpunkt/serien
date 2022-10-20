@@ -15,8 +15,9 @@ class UserController extends MainController
     public function register($params = [])
     {
         $this->view->setContentTemplate('register');
-
         $this->view->render();
+
+
     }
 
     public function doRegister($params = [])
@@ -30,11 +31,22 @@ class UserController extends MainController
 
         }
     }
+
     public function login($params = [])
     {
         $this->view->setContentTemplate('login');
 
         $this->view->render();
+    }
+
+    public function doLogin($params = [])
+    {
+        if ($this->model->Login(Security::clean($_POST))) {
+            Session::addMSG('success', 'Du hast dich erfolgreich eingeloggt');
+        } else {
+            Session::addMSG('danger', 'Login fehlgeschlagen');
+        }
+        Router::redirect('login');
     }
 
 }

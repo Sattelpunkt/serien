@@ -37,8 +37,6 @@ class Users
 
     public function doRegister($registerData)
     {
-
-        Helpers::dnd($registerData);
         $db = Database::getInstance();
         $sql = "INSERT INTO `accounts`(username, password, email, filme, serien, buecher, hoerbuecher) VALUES (:username, :password, :email, :filme, :serien, :buecher, :hoerbuecher)";
         $args = [
@@ -53,4 +51,49 @@ class Users
         return $db->run($sql, $args);
 
     }
+
+    public function checkLogin($loginData)
+    {
+        $error = FALSE;
+        $db = Database::getInstance();
+
+        $result = $db->column($db->run('SELECT `password` FROM `accounts` WHERE `username` = :username', [':username' => $loginData['username']]));
+        if (isset($result['password'])) {
+            if (!password_verify($loginData['password'], $result['password'])) {
+                Session::addMSG('danger', "Username/Passwort falsch(2)");
+                $error = TRUE;
+            }
+        } else {
+            $error = TRUE;
+            Session::addMSG('danger', "Username/Passwort falsch(1)");
+        }
+
+        return $error;
+    }
+
+    public function doLogin($registerData)
+    {
+        $db = Database::getInstance();
+        Session::set('loggedIn', TRUE);
+        Session::set('userID', $db->getLastInsertID());
+        return TRUE;
+    }
+
+    public function getUserID()
+    {
+        return Session::get('userID');
+    }
+
+    public function isLogin()
+    {
+        return Session::exists('loggedIn') AND Session::get('loggedIn') == TRUE;
+    }
+
+    public function doLogout()
+    {
+        Session::delete('loggedIn');
+        Session::delete('userID');
+    }
+
+
 }

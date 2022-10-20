@@ -12,7 +12,7 @@ $this->printHeader();
                     $this->displayMSG();
                     ?>
 
-                    <form action="https://<?= URL ?>dologin/" method="post">
+                    <form action="https://<?= URL ?>doLogin/" method="post">
                         <div class="form-group col-md-6">
                             <div class="mb-3">
                                 <label for="username" class="form-label">Username</label>
@@ -21,8 +21,8 @@ $this->printHeader();
                             </div>
 
                             <div class="mb-3">
-                                <label for="password1" class="form-label">Passwort</label>
-                                <input type="password" class="form-control" id="password1" name="password1"
+                                <label for="password class="form-label">Passwort</label>
+                                <input type="password" class="form-control" id="password" name="password"
                                        aria-describedby="passwordHelp" autocomplete="false" required>
                             </div>
                             <div class="col-12">
