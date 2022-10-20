@@ -9,49 +9,29 @@ $this->printNavigation();
             <div class="boxbody">
                 <p class="text-end">
                     <a href="https://<?= URL ?>genre/new">
-                        <button type="button" class="btn btn-primary graybutton">Neues Genre anlegen</button>
+                        <button type="button" class="btn btn-primary bluebutton">Neues Genre anlegen</button>
                     </a></p>
-                <table class="table table-borderless table_main">
+                <table class="table table-borderless table_main ">
                     <thead>
                     <tr>
-                        <th scope="col">Prefix</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Aktion</th>
+                        <th style="width: 90%">Name</th>
+                        <th>Aktion</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <th scope="row">PD</th>
-                        <td><b>Los Santos Police Department</b></td>
-                        <td><i class="fa fa-play" aria-hidden="true"></i>&nbsp; &nbsp;<i class="fa fa-stop"
-                                                                                         aria-hidden="true"></i>&nbsp;
-                            &nbsp;<i class="fa fa-cog" aria-hidden="true"></i></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">SD</th>
-                        <td><b>San Andreas Sherrif Department</b></td>
-                        <td><i class="fa fa-play" aria-hidden="true"></i>&nbsp; &nbsp;<i class="fa fa-stop"
-                                                                                         aria-hidden="true"></i>&nbsp;
-                            &nbsp;<i class="fa fa-cog" aria-hidden="true"></i></td>
+                    <?php
+                    foreach ($this->output['genre'] as $value) {
+                        ?>
+                        <tr>
+                            <th scope="row"><?= $value['name'] ?></th>
 
-                    </tr>
-                    <tr>
-                        <th scope="row">DOJ</th>
-                        <td><b>Department of Justice</b></td>
-                        <td><i class="fa fa-play" aria-hidden="true"></i>&nbsp; &nbsp;<i class="fa fa-stop"
-                                                                                         aria-hidden="true"></i>&nbsp;
-                            &nbsp;<i class="fa fa-cog" aria-hidden="true"></i></td>
-
-
-                    </tr>
-                    <tr>
-                        <th scope="row">MD</th>
-                        <td><b>Los Santos Medical Department</b></td>
-                        <td><i class="fa fa-play" aria-hidden="true"></i>&nbsp; &nbsp;<i class="fa fa-stop"
-                                                                                         aria-hidden="true"></i>&nbsp;
-                            &nbsp;<i class="fa fa-cog" aria-hidden="true"></i></td>
-
-                    </tr>
+                            <td><a href="https://<?= URL ?>genre/edit/<?= $value['id'] ?>"><i
+                                            class="fas fa-pen  text-white"></i></a>&nbsp; &nbsp;
+                                <a href="https://<?= URL ?>genre/delete/<?= $value['id'] ?>"><i class="fas fa-trash text-white"></i></a>&nbsp;
+                                &nbsp;
+                            </td>
+                        </tr>
+                    <?php } ?>
                     </tbody>
                 </table>
 

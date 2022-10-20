@@ -14,7 +14,9 @@ class GenreController extends MainController
 
     public function settings($params = [])
     {
+        $genreData['genre'] = $this->model->getGenreByUserID();
         $this->view->setContentTemplate('genreSettings');
+        $this->view->setOutput($genreData);
         $this->view->render();
 
     }

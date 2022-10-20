@@ -22,7 +22,7 @@ $this->printNavigation();
                         <input type="password" class="form-control" id="inputCity" name="newPassword2" required>
                     </div>
                     <div class="col-12">
-                        <button type="submit" class="btn btn-primary graybutton">Passwort ändern</button>
+                        <button type="submit" class="btn btn-primary bluebutton">Passwort ändern</button>
                     </div>
                 </form>
 
@@ -42,7 +42,7 @@ $this->printNavigation();
                     </div>
 
                     <div class="col-12">
-                        <button type="submit" class="btn btn-primary graybutton">Email ändern</button>
+                        <button type="submit" class="btn btn-primary bluebutton">Email ändern</button>
                     </div>
                 </form>
             </div>

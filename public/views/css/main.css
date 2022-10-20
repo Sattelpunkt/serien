@@ -161,3 +161,12 @@ tr {
 .alert {
     font-size: 12px;
 }
+a {
+    color: #0060B6;
+    text-decoration: none;
+}
+
+.bluebutton {
+    background-color: #454D55;
+    border: none;
+}

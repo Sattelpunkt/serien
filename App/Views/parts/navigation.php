@@ -93,7 +93,7 @@
                 </li>
                 <li class="nav-item">
                     <a href="https://<?= URL ?>logout" class="nav-link text-white">
-                        <i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp; &nbsp;Ausloggen
+                        <i class="fas fa-sign-out-alt"></i>&nbsp; &nbsp;Ausloggen
                     </a>
                 </li>
             </ul>

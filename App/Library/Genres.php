@@ -16,5 +16,12 @@ class Genres
 
     }
 
+    public function getGenreByUserID($userID) {
+        $db = Database::getInstance();
+        $sql = "SELECT * FROM `genre` WHERE `userId` = :userID";
+        $args = [":userID" =>$userID];
+        return $db->row($db->run($sql,$args));
+    }
+
 
 }

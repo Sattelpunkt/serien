@@ -9,7 +9,7 @@ $this->printNavigation();
             <div class="boxbody">
                 <p class="text-start">
                     <a href="https://<?= URL ?>/genre/settings/">
-                        <button type="button" class="btn btn-primary graybutton">Zurück</button>
+                        <button type="button" class="btn btn-primary bluebutton">Zurück</button>
                     </a></p>
                 <p class="text-center">
                 <form class="row g-3" action="https://<?= URL ?>genre/insert/" method="post">
@@ -20,7 +20,7 @@ $this->printNavigation();
                     </div>
 
                     <div class="col-12">
-                        <button type="submit" class="btn btn-primary graybutton">anlegen</button>
+                        <button type="submit" class="btn btn-primary bluebutton">anlegen</button>
                     </div>
                 </form>
             </p>
