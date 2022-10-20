@@ -39,6 +39,7 @@ Jeder User soll frei entscheiden, welche, der oben genannten Medien, er nutzen m
   - ~~Login~~
   - Password Ändern
   - Email Ändern
+ - Genre
   - Genre anlegen/bearbeiten/löschen
 
 ### Mögliche Session Message Types
