@@ -7,7 +7,7 @@ use \App\config;
 
 define('DS', DIRECTORY_SEPARATOR);
 
-define('PROOT', str_replace('public', '', __DIR__));
+define('PROOT', dirname(__DIR__));
 define('URL',$_SERVER['HTTP_HOST']."/");
 
 
