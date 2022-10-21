@@ -1,51 +1,55 @@
-## Herzlich Willkommen bei dem Projekt "Medien Datenbank"
+# Medienverwaltung/Mediathek
 
-Im Frühjahr geht meine Bewerbungsphase für meine "Fachpraktische Ausbildung" los.
-Dadurch, dass ich große Lücken im Lebenslauf habe, werde mich mit einem PHP Projekt vorstellen.
+Herzlich Willkommen bei meinem PHP-Projekt zur Realisierung einer Medienverwaltung/Mediathek.
 
-Das Projekt soll eine Datenbank für alle Leute sein, die Ihren Überblick über
+Im Frühjahr geht meine Bewerbungsphase für meine *Fachpraktische Ausbildung* los. Mit diesem PHP-Projekt möchte ich mich vorstellen und mein Können präsentieren.
+
+## Das Projekt
+
+Das Projekt soll eine Datenbank für alle Leute sein, die Ihren Überblick über …
+
 - Filme (0)
 - Serien (1)
 - Bücher (2)
 - Hörbücher (3)
 
-verloren haben und diese kategorisieren wollen.
+… verloren haben und diese kategorisieren wollen.
 
+### PHP-Anforderungen
 
+- [MVC](https://de.wikipedia.org/wiki/Model_View_Controller)-Architektur
+- [OOP](https://de.wikipedia.org/wiki/Objektorientierte_Programmierung)
+  - Autoload
+  - [PDO](https://de.wikipedia.org/wiki/PHP_Data_Objects)
+- Session Flash Messages
 
+## Geplante Features
 
-### Folgende Features soll das Projekt erfüllen
-- Für jedes Thema soll es folgende Möglichkeiten geben
-  - Aktuelle 
-  - Wunschliste
-  - Abgeschlossen
-  - Abgebrochen
-  - Jedes Medium soll in frei wählbaren Genres kategorisierbar sein
-  - Bewertung sollen möglich sein
-  - Freitext für Gedanken/Meinungen zum Medium
+### Features für Benutzer
 
+- Für jedes Thema soll es folgende Möglichkeiten geben:<!-- was heißt Thema? -->
+  - Aktuelle🟢<!-- was bedeutet das? -->
+  - Wunschliste🟢<!-- was bedeutet das? -->
+  - Abgeschlossen🟢<!-- was bedeutet das? -->
+  - Abgebrochen🟢<!-- was bedeutet das? -->
+  - Jedes Medium soll in frei wählbare Genres kategorisierbar sein🟢
+  - Bewertungen sollen möglich sein🟢
+  - Freitext für Gedanken/Meinungen zum Medium🟢
 
-### PHP Anforderungen
-- OOP
-- MVC
-- Autoload
-- Datenbanklasse PDO
-- Session MSG
+### Software-seitige Features
 
-### Nächste Schritte: 
-
-- UserManagement
-  - ~~Registieren(ohne Email versand vorerst)~~
-  - ~~Login~~
-  - ~~Password Ändern~~
-  - ~~Email Ändern~~
+- User-Management
+  - Registierung🟢 (vorerst ohne E-Mail-Versand)
+  - Login🟢
+  - Passwort ändern🟢
+  - E-Mail-Adresse ändern🟢
+- Mögliche Session Message Types
+  - success🟢
+  - danger🟢
+  - warning🟢
+  - info🟢
 - Genre
-  - ~~Genre anlegen~~/bearbeiten/löschen
+  - Genre anlegen🟢, bearbeiten🔴, löschen🔴
 
-### Mögliche Session Message Types
-
-- success
-- danger
-- warning
-- info
-
+🟢 = done  
+🔴 = to do

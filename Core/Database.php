@@ -26,7 +26,7 @@ class Database
 
         try {
             $this->dbh = new PDO($this->dsn, $this->user, $this->pass, $this->options);
-        } catch (PDOException $e) {
+        } catch (\PDOException $e) {
             $this->error = $e->getMessage();
         }
 
